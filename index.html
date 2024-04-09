@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="board">
+    </div>
+
+    <div id="inputs">
+        <label>
+            Pixelméret
+            <input type="number" min="10" max="20" step="2" onchange="changePixSize(this.value)" value="20"/>
+        </label>
+        <label>
+            Betűköz
+            <input type="number" min="1" max="3" step="1" onchange="changeSpacing(this.value)" value="1"/>
+        </label>
+        <label>
+            Megjelenített betűk
+            <input type="number" min="5" max="15" step="1" onchange="changeCharNum(this.value)" value="5"/>
+        </label>
+        <label>
+            Késleltetés (ms)
+            <input type="number" min="10" max="1000" step="1" onchange="changeDelay(this.value)" value="50"/>
+        </label>
+        <label>
+            Színek
+            <select onchange="changeColors(this.value)">
+                <option value="lgr">Világosszürke + piros</option>
+                <option value="rw">Piros + fehér</option>
+                <option value="bw">Kék + fehér</option>
+                <option value="gy">Sötétszürke + sárga</option>
+                <option value="ry">Piros + sárga</option>
+                <option value="by">Kék + sárga</option>
+            </select>
+        </label>
+        
+        <input type="text" onchange="changeText(this.value)" value="HELLO" />
+        <button type="button" onclick="go()" id="goButton">Mehet</button>
+        <button type="button" onclick="start()" id="startButton">Start</button>
+        <button type="button" onclick="stop()" id="stopButton" disabled>Stop</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

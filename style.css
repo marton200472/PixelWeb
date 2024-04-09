@@ -1,0 +1,16 @@
+#board {
+    width: fit-content;
+    margin: auto auto;
+    border: 1px solid black;
+}
+
+.dRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body {
+    background-color: darkgreen;
+    color: white;
+}
